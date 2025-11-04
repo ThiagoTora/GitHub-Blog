@@ -65,108 +65,60 @@ npm run dev
 
 A estrutura de pastas e arquivos do projeto é organizada da seguinte forma:
 
+```bash
+
 ├── eslint.config.js
-
 ├── index.html
-
 ├── package-lock.json
-
 ├── package.json
-
 ├── README.md
-
 ├── public/
-
 │   └── vite.svg
-
 ├── src/
-
 │   ├── @types/
-
 │   │   └── styled.d.ts
-
 │   ├── assets/
-
 │   │   ├── BlogLogo.svg
-
 │   │   └── HeadBG.svg
-
 │   ├── components/
-
 │   │   ├── Header/
-
 │   │   │   ├── index.tsx
-
 │   │   │   └── styles.ts
-
 │   │   └── PostHeader/
-
 │   │       ├── index.tsx
-
 │   │       └── styles.ts
-
 │   ├── Config/
-
 │   │   └── Constant.ts
-
 │   ├── context/
-
 │   │   └── BlogContext.tsx
-
 │   ├── pages/
-
 │   │   ├── Blog/
-
 │   │   │   ├── components/
-
 │   │   │   │   ├── PostCard/
-
 │   │   │   │   │   ├── index.tsx
-
-│   │   │   │   │   └── styles.
-
+│   │   │   │   │   └── styles.ts
 │   │   │   │   └── SearchForm/
-
 │   │   │   │       ├── index.tsx
-
 │   │   │   │       └── styles.ts
-
 │   │   │   ├── index.tsx
-
 │   │   │   └── styles.ts
-
 │   │   └── Post/
-
 │   │       ├── components/
-
 │   │       │   └── PostContent/
-
 │   │       │       ├── index.tsx
-
 │   │       │       └── styles.ts
-
 │   │       ├── index.tsx
-
 │   │       └── styles.ts
-
 │   ├── styles/
-
 │   │   ├── global.ts
-
 │   │   └── themes/
-
 │   │       └── default.ts
-
 │   ├── App.tsx
-
 │   ├── main.tsx
-
 │   └── Router.tsx
-
 ├── tsconfig.app.json
-
 ├── tsconfig.json
-
 ├── tsconfig.node.json
-
 └── vite.config.ts
+
+```
