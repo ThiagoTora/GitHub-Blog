@@ -1,73 +1,121 @@
-# React + TypeScript + Vite
+# 🚀 GitHub Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um blog construído com React e TypeScript que consome a API do GitHub para listar repositórios como posts e exibe o perfil do usuário, oferecendo uma experiência de leitura integrada e personalizável.
 
-Currently, two official plugins are available:
+A aplicação busca repositórios (posts) e informações do usuário (`ThiagoTora`) diretamente da API do GitHub.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚠️ Configuração de Usuário e Token
 
-## React Compiler
+O projeto está configurado por padrão para usar o usuário **`ThiagoTora`**. Para o projeto funcionar será necessario mudar para o seu próprio perfil, atualizando duas informações:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Nome de Usuário:** Modifique o arquivo `src/Config/Constant.ts` com seu nome de usuário do GitHub.
+    ```typescript
+    // thiagotora/github-blog/GitHub-Blog-5cd623af0184081d151a9590d82baf7982a318d1/src/Config/Constant.ts
+    export const GITHUB_USERNAME = "SEU_USUARIO" // Atualize aqui!
+    ```
 
-## Expanding the ESLint configuration
+2.  **Token de Acesso:** Crie um arquivo `.env` na raiz do projeto com seu Token de Acesso Pessoal do GitHub (deve ter a permissão `public_repo` se o repositório for privado).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    ```.env
+    VITE_GITHUB_TOKEN="SEU_TOKEN_AQUI"
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Funcionalidades
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Listagem de Posts:** Exibe uma lista de repositórios do GitHub do usuário configurado, servindo como posts do blog.
+* **Detalhes do Post:** Ao clicar em um card, navega para uma página de postagem (`/InfoContent/:id`) que exibe o conteúdo do arquivo `README.md` do repositório, renderizado com Markdown.
+* **Informações do Perfil:** Exibe o avatar, nome, login, empresa e número de seguidores do usuário.
+* **Contagem de Comentários:** O número de comentários é dinamicamente buscado a partir das Issues do respectivo repositório no GitHub.
+* **Pesquisa de Conteúdo:** Permite buscar posts (repositórios) usando a API de busca do GitHub.
+* **Experiência de Usuário:** Design responsivo e tema escuro (dark theme) estilizado com `styled-components`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tecnologias Utilizadas
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias principais:
+
+* **Frontend Framework:** React (com Hooks e Context API)
+* **Linguagem:** TypeScript
+* **Build Tool:** Vite
+* **Estilização:** Styled-Components
+* **Roteamento:** React Router DOM
+* **Markdown:** `react-markdown` e `rehype-raw`
+* **Outros:** `date-fns` (para formatação de datas) e Font Awesome (para ícones)
+
+## ⚙️ Instalação e Execução
+
+### Pré-requisitos
+
+Certifique-se de ter o [Node.js](https://nodejs.org/) (versão compatível, ex: 20.19.0 ou superior) e o `npm` instalados.
+
+### 1. Instalar Dependências
+
+Execute o comando a seguir no terminal para instalar as dependências do projeto:
+
+```bash
+npm install
+``` 
+### 2. Executar o Projeto
+Para iniciar o servidor de desenvolvimento com o Vite:
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 📂 Estrutura de Arquivos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+A estrutura de pastas e arquivos do projeto é organizada da seguinte forma:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+.
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── @types/
+│   │   └── styled.d.ts
+│   ├── assets/
+│   │   ├── BlogLogo.svg
+│   │   └── HeadBG.svg
+│   ├── components/
+│   │   ├── Header/
+│   │   │   ├── index.tsx
+│   │   │   └── styles.ts
+│   │   └── PostHeader/
+│   │       ├── index.tsx
+│   │       └── styles.ts
+│   ├── Config/
+│   │   └── Constant.ts
+│   ├── context/
+│   │   └── BlogContext.tsx
+│   ├── pages/
+│   │   ├── Blog/
+│   │   │   ├── components/
+│   │   │   │   ├── PostCard/
+│   │   │   │   │   ├── index.tsx
+│   │   │   │   │   └── styles.ts
+│   │   │   │   └── SearchForm/
+│   │   │   │       ├── index.tsx
+│   │   │   │       └── styles.ts
+│   │   │   ├── index.tsx
+│   │   │   └── styles.ts
+│   │   └── Post/
+│   │       ├── components/
+│   │       │   └── PostContent/
+│   │       │       ├── index.tsx
+│   │       │       └── styles.ts
+│   │       ├── index.tsx
+│   │       └── styles.ts
+│   ├── styles/
+│   │   ├── global.ts
+│   │   └── themes/
+│   │       └── default.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── Router.tsx
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
