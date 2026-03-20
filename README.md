@@ -1,10 +1,10 @@
-# 🚀 GitHub Blog
+# --------- GitHub Blog
 
 Um blog construído com React e TypeScript que consome a API do GitHub para listar repositórios como posts e exibe o perfil do usuário, oferecendo uma experiência de leitura integrada e personalizável.
 
 A aplicação busca repositórios (posts) e informações do usuário (`ThiagoTora`) diretamente da API do GitHub.
 
-## ⚠️ Configuração de Usuário e Token
+## --------- Configuração de Usuário e Token
 
 O projeto está configurado por padrão para usar o usuário **`ThiagoTora`**. Para o projeto funcionar será necessario mudar para o seu próprio perfil, atualizando duas informações:
 
@@ -20,7 +20,7 @@ O projeto está configurado por padrão para usar o usuário **`ThiagoTora`**. P
     VITE_GITHUB_TOKEN="SEU_TOKEN_AQUI"
     ```
 
-## ✨ Funcionalidades
+## --------- Funcionalidades
 
 * **Listagem de Posts:** Exibe uma lista de repositórios do GitHub do usuário configurado, servindo como posts do blog.
 * **Detalhes do Post:** Ao clicar em um card, navega para uma página de postagem (`/InfoContent/:id`) que exibe o conteúdo do arquivo `README.md` do repositório, renderizado com Markdown.
@@ -29,7 +29,7 @@ O projeto está configurado por padrão para usar o usuário **`ThiagoTora`**. P
 * **Pesquisa de Conteúdo:** Permite buscar posts (repositórios) usando a API de busca do GitHub.
 * **Experiência de Usuário:** Design responsivo e tema escuro (dark theme) estilizado com `styled-components`.
 
-## 🛠️ Tecnologias Utilizadas
+## --------- Tecnologias Utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias principais:
 
@@ -41,7 +41,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias principais:
 * **Markdown:** `react-markdown` e `rehype-raw`
 * **Outros:** `date-fns` (para formatação de datas) e Font Awesome (para ícones)
 
-## ⚙️ Instalação e Execução
+## --------- Instalação e Execução
 
 ### Pré-requisitos
 
@@ -61,7 +61,7 @@ Para iniciar o servidor de desenvolvimento com o Vite:
 npm run dev
 ```
 
-### 📂 Estrutura de Arquivos
+### --------- Estrutura de Arquivos
 
 A estrutura de pastas e arquivos do projeto é organizada da seguinte forma:
 
