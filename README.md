@@ -46,7 +46,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) (versão compatível, ex: 
 ### 3. Instalar Dependências
 
 ```bash
-npm install
+    npm install
 ``` 
 
 ### 4. Configuração de Usuário e Token
