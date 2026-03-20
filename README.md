@@ -4,22 +4,6 @@ Um blog construído com React e TypeScript que consome a API do GitHub para list
 
 A aplicação busca repositórios (posts) e informações do usuário (`ThiagoTora`) diretamente da API do GitHub.
 
-## --------- Configuração de Usuário e Token
-
-O projeto está configurado por padrão para usar o usuário **`ThiagoTora`**. Para o projeto funcionar será necessario mudar para o seu próprio perfil, atualizando duas informações:
-
-1.  **Nome de Usuário:** Modifique o arquivo `src/Config/Constant.ts` com seu nome de usuário do GitHub.
-    ```typescript
-    // thiagotora/github-blog/GitHub-Blog-5cd623af0184081d151a9590d82baf7982a318d1/src/Config/Constant.ts
-    export const GITHUB_USERNAME = "SEU_USUARIO" // Atualize aqui!
-    ```
-
-2.  **Token de Acesso:** Crie um arquivo `.env` na raiz do projeto com seu Token de Acesso Pessoal do GitHub (deve ter a permissão `public_repo` se o repositório for privado).
-
-    ```.env
-    VITE_GITHUB_TOKEN="SEU_TOKEN_AQUI"
-    ```
-
 ## --------- Funcionalidades
 
 * **Listagem de Posts:** Exibe uma lista de repositórios do GitHub do usuário configurado, servindo como posts do blog.
@@ -47,15 +31,41 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias principais:
 
 Certifique-se de ter o [Node.js](https://nodejs.org/) (versão compatível, ex: 20.19.0 ou superior) e o `npm` instalados.
 
-### 1. Instalar Dependências
+### 1. Clonar Repositório
 
-Execute o comando a seguir no terminal para instalar as dependências do projeto:
+```bash
+    git clone https://github.com/ThiagoTora/GitHub-Blog.git
+```
+
+### 2. Acessar pasta
+
+```bash
+    cd GitHub-Blog
+```
+
+### 3. Instalar Dependências
 
 ```bash
 npm install
 ``` 
-### 2. Executar o Projeto
-Para iniciar o servidor de desenvolvimento com o Vite:
+
+### 4. Configuração de Usuário e Token
+
+O projeto está configurado por padrão para usar o usuário **`ThiagoTora`**. Para o projeto funcionar será necessario mudar para o seu próprio perfil, atualizando duas informações:
+
+4.1.  **Nome de Usuário:** Modifique o arquivo `src/Config/Constant.ts` com seu nome de usuário do GitHub.
+    ```typescript
+    // thiagotora/github-blog/GitHub-Blog-5cd623af0184081d151a9590d82baf7982a318d1/src/Config/Constant.ts
+    export const GITHUB_USERNAME = "SEU_USUARIO" // Atualize aqui!
+    ```
+
+4.2.  **Token de Acesso:** Crie um arquivo `.env` na raiz do projeto com seu Token de Acesso Pessoal do GitHub (deve ter a permissão `public_repo` se o repositório for privado).
+
+    ```.env
+    VITE_GITHUB_TOKEN="SEU_TOKEN_AQUI"
+    ```
+    
+### 5. Executar o Projeto
 
 ```bash
 npm run dev
@@ -122,3 +132,4 @@ A estrutura de pastas e arquivos do projeto é organizada da seguinte forma:
 └── vite.config.ts
 
 ```
+
