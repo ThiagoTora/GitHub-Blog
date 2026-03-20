@@ -1,6 +1,6 @@
 # --------- GitHub Blog
 
-Um blog construído com React e TypeScript que consome a API do GitHub para listar repositórios como posts e exibe o perfil do usuário, oferecendo uma experiência de leitura integrada e personalizável.
+Um blog construído com React e TypeScript que consome a API do GitHub para listar repositórios como posts e exibe o perfil do usuário, oferecendo uma experiência de leitura integrada e personalizável. 
 
 A aplicação busca repositórios (posts) e informações do usuário (`ThiagoTora`) diretamente da API do GitHub.
 
