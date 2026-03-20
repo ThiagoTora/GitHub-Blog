@@ -62,13 +62,13 @@ O projeto está configurado por padrão para usar o usuário **`ThiagoTora`**. P
 4.2.  **Token de Acesso:** Crie um arquivo `.env` na raiz do projeto com seu Token de Acesso Pessoal do GitHub (deve ter a permissão `public_repo` se o repositório for privado).
 
     ```.env
-    VITE_GITHUB_TOKEN="SEU_TOKEN_AQUI"
+        VITE_GITHUB_TOKEN="SEU_TOKEN_AQUI"
     ```
     
 ### 5. Executar o Projeto
 
 ```bash
-npm run dev
+    npm run dev
 ```
 
 ### --------- Estrutura de Arquivos
