@@ -42,16 +42,32 @@ export function BlogProvider({ children }: BlogContextProps) {
             ? `search/repositories?q=${query}+user:${username}&per_page=100`
             : `users/${username}/repos?per_page=100`;
 
-        const baseUrl = 'https://api.github.com/';
+        const baseUrl = 'https://api.github.com';
 
         try {
+            const headers: HeadersInit = {};
+
+            if (GITHUB_TOKEN) {
+                headers.Authorization = `token ${GITHUB_TOKEN}`;
+            }
+
             const response = await fetch(`${baseUrl}${searchPath}`, {
-                headers: {
-                    Authorization: `token ${GITHUB_TOKEN}`,
-                },
+                headers,
             });
             
             if (!response.ok) {
+                console.error("Erro na API:", response.status);
+
+                if (response.status === 404) {
+                    console.error("Usuário não encontrado");
+                } else if (response.status === 401) {
+                    console.error("Token inválido");
+                } else if (response.status === 403) {
+                    console.error("Rate limit atingido ou acesso negado");
+                }
+
+                setPosts([]);
+                setTotalCount(0);
                 setLoading(false);
                 return;
             }
