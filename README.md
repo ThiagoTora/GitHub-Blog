@@ -4,6 +4,15 @@ Um blog construído com React e TypeScript que consome a API do GitHub para list
 
 A aplicação busca repositórios (posts) e informações do usuário (`ThiagoTora`) diretamente da API do GitHub.
 
+## --------- Deploy
+
+Link de Visualização do projeto:
+
+```bash
+    https://git-hub-blog-i6v5xrxxy-thiagotorafrazao09-1491s-projects.vercel.app
+```
+
+
 ## --------- Funcionalidades
 
 * **Listagem de Posts:** Exibe uma lista de repositórios do GitHub do usuário configurado, servindo como posts do blog.
