@@ -42,7 +42,7 @@ export function BlogProvider({ children }: BlogContextProps) {
             ? `search/repositories?q=${query}+user:${username}&per_page=100`
             : `users/${username}/repos?per_page=100`;
 
-        const baseUrl = 'https://api.github.com';
+        const baseUrl = 'https://api.github.com/';
 
         try {
             const headers: HeadersInit = {};
