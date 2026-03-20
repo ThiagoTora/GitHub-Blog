@@ -9,7 +9,7 @@ A aplicação busca repositórios (posts) e informações do usuário (`ThiagoTo
 Link de Visualização do projeto:
 
 ```bash
-    https://git-hub-blog-i6v5xrxxy-thiagotorafrazao09-1491s-projects.vercel.app
+    https://git-hub-blog-tau.vercel.app
 ```
 
 
