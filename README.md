@@ -1,3 +1,6 @@
+<img width="1865" height="974" alt="image" src="https://github.com/user-attachments/assets/61ca9961-a88a-457f-9610-b33383bb2ed8" />
+
+
 # --------- GitHub Blog
 
 Um blog construído com React e TypeScript que consome a API do GitHub para listar repositórios como posts e exibe o perfil do usuário, oferecendo uma experiência de leitura integrada e personalizável. 
