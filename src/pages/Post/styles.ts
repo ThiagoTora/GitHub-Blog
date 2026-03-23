@@ -7,6 +7,11 @@ export const PostContainer = styled.div`
     padding: 0 1.5rem; 
     margin-top: 6rem; 
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     @media (max-width: 900px) {
         margin-top: 4rem; 
         padding: 0 1rem;
